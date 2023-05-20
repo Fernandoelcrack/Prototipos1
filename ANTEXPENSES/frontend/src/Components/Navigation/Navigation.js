@@ -32,7 +32,9 @@ function Navigation({active, setActive}){
             </ul>
             <div className="botton-nav">
                 <li>
-                    {attention} Atencion al cliente
+                    <button>
+                    <a href="http://localhost:8080/soporte1/" target="_blank">{attention} Atencion al cliente</a>
+                    </button>
                 </li>
                 <li>
                     {signout} Sign Out
