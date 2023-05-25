@@ -5,7 +5,13 @@ import logo from '../../img/logo.jpg'
 import { menuItems } from "../../utils/menuItems"
 import { attention, signout } from "../../utils/Icons"
 
+
 function Navigation({active, setActive}){
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.reload();
+    }
     
     return(
         <NavStyled>
@@ -37,7 +43,9 @@ function Navigation({active, setActive}){
                     </button>
                 </li>
                 <li>
-                    {signout} Sign Out
+                    {signout} <button onClick={handleLogout}>
+                        Sign Out
+                    </button>
                 </li>
             </div>
         </NavStyled>
